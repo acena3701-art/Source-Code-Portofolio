@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avicena Putra Pradana — Portfolio</title>
+
+  <!-- Google Fonts: Syne (headings) + Outfit (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== CURSOR GLOW ===================== -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ===================== CANVAS BACKGROUND ===================== -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo / Inisial -->
+      <a href="#hero" class="nav-logo">
+        <span class="logo-text">AVP</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <!-- Menu desktop -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">Tentang</a></li>
+        <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+        <li><a href="#skills" class="nav-link">Keahlian</a></li>
+        <li><a href="#projects" class="nav-link">Proyek</a></li>
+        <li><a href="#contact" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <!-- Tombol hamburger untuk mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <!-- Badge status -->
+      <div class="hero-badge fade-up">
+        <span class="badge-dot"></span>
+        <span>Mahasiswa Teknik Informatika</span>
+      </div>
+
+      <!-- Nama utama -->
+      <h1 class="hero-name fade-up">
+        <span class="name-line">Avicena</span>
+        <span class="name-line accent-text">Putra Pradana</span>
+      </h1>
+
+      <!-- Typewriter tagline -->
+      <p class="hero-tagline fade-up">
+        Seorang yang tertarik pada
+        <span class="typewriter" id="typewriter"></span>
+      </p>
+
+      <!-- Deskripsi singkat -->
+      <p class="hero-desc fade-up">
+        Belajar memahami sistem dari dalam — dari baris kode
+        hingga cara kerja mesin yang sesungguhnya.
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="hero-cta fade-up">
+        <a href="#about" class="btn btn-primary">Kenali Saya</a>
+        <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+      </div>
+
+      <!-- Social links -->
+      <div class="hero-socials fade-up">
+        <a href="mailto:avicena@email.com" class="social-icon" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/" target="_blank" class="social-icon" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" class="social-icon" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://instagram.com/" target="_blank" class="social-icon" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Foto profil -->
+    <div class="hero-photo fade-up">
+      <div class="photo-frame">
+        <div class="photo-glow"></div>
+        <!--
+          GANTI FOTO: Ganti src di bawah dengan path foto profil kamu.
+          Contoh: src="images/foto-profil.jpg"
+        -->
+        <img
+          src="images/fotoaviai.jpeg"
+          alt="Avicena Putra Pradana"
+          class="profile-photo"
+          id="profilePhoto"
+        />
+        <div class="photo-ring"></div>
+        <div class="photo-ring ring-2"></div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <div class="scroll-arrow"></div>
+      <span>Scroll ke bawah</span>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// tentang saya</span>
+        <h2 class="section-title">Siapa Avicena?</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Teks tentang saya -->
+        <div class="about-text reveal">
+          <p>
+            Hei! Nama saya <strong>Avicena Putra Pradana</strong>, mahasiswa
+            Teknik Informatika yang lagi asik menyelami dunia pemrograman
+            dan sistem komputer. Bukan sekadar kuliah — saya belajar karena
+            genuinely penasaran sama cara kerja komputer dari bawah.
+          </p>
+          <p>
+            Saat ini fokus saya ada di <em>sistem operasi</em>, <em>struktur data</em>,
+            dan membangun <em>logika pemrograman</em> yang solid. Saya percaya
+            fondasi yang kuat adalah kunci sebelum melangkah ke hal-hal yang
+            lebih advanced.
+          </p>
+          <p>
+            Ke depannya? Saya tertarik banget sama dunia
+            <strong class="accent-text">Data Engginer</strong> — bidang yang
+            membutuhkan pemahaman mendalam tentang sistem dan cara berpikir
+            seperti seorang problem solver sejati.
+          </p>
+          <p>
+            Di luar akademik, saya juga aktif di organisasi sebagai tempat
+            mengembangkan <em>leadership</em> dan kemampuan bekerja sama.
+          </p>
+        </div>
+
+        <!-- Kartu info singkat -->
+        <div class="about-cards reveal">
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="info-content">
+              <span class="info-label">Pendidikan</span>
+              <span class="info-value">Teknik Informatika, Insitut Teknologi Sumatera</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-content">
+              <span class="info-label">Lokasi</span>
+              <span class="info-value">Indonesia</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="info-content">
+              <span class="info-label">Minat Utama</span>
+              <span class="info-value">Data Engginer</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-code"></i></div>
+            <div class="info-content">
+              <span class="info-label">Bahasa Utama</span>
+              <span class="info-value">C++ & Python</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fab fa-linux"></i></div>
+            <div class="info-content">
+              <span class="info-label">OS Favorit</span>
+              <span class="info-value">Linux (Dasar)</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-users"></i></div>
+            <div class="info-content">
+              <span class="info-label">Peran Org.</span>
+              <span class="info-value">Ketua & Koordinator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE SECTION ===================== -->
+  <section class="section section-dark" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// perjalanan</span>
+        <h2 class="section-title">Pengalaman Organisasi</h2>
+        <p class="section-subtitle">Tempat saya belajar memimpin, berkolaborasi, dan tumbuh.</p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline reveal">
+        <!-- Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2023 – 2024</div>
+          <div class="timeline-card">
+            <div class="timeline-photo">
+              <!--
+                GANTI FOTO: Ganti src dengan foto organisasi Pramuka kamu.
+                Contoh: src="images/pramuka.jpg"
+              -->
+              <img
+                src="https://placehold.co/500x280/111827/00d4ff?text=Foto+Pramuka"
+                alt="Kegiatan Pramuka"
+              />
+              <div class="photo-overlay">
+                <i class="fas fa-images"></i>
+              </div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-role">
+                <span class="role-badge">Ketua</span>
+                <h3>Pramuka</h3>
+              </div>
+              <p>
+                Memimpin seluruh kegiatan Pramuka selama satu periode,
+                mengkoordinasi anggota, merencanakan program latihan, dan
+                memastikan semua kegiatan berjalan dengan baik. Pengalaman ini
+                mengajarkan saya tentang tanggung jawab, disiplin, dan
+                bagaimana memotivasi orang lain untuk mencapai tujuan bersama.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Kepemimpinan</span>
+                <span class="tag">Koordinasi</span>
+                <span class="tag">Manajemen Tim</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2023 – 2024</div>
+          <div class="timeline-card">
+            <div class="timeline-photo">
+              <!--
+                GANTI FOTO: Ganti src dengan foto kegiatan OSIS kamu.
+                Contoh: src="images/osis.jpg"
+              -->
+              <img
+                src="https://placehold.co/500x280/111827/7c3aed?text=Foto+OSIS"
+                alt="Kegiatan OSIS"
+              />
+              <div class="photo-overlay">
+                <i class="fas fa-images"></i>
+              </div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-role">
+                <span class="role-badge role-purple">Ketua Divisi</span>
+                <h3>OSIS – Divisi Kepemimpinan</h3>
+              </div>
+              <p>
+                Menjabat sebagai Ketua Divisi Kepemimpinan dalam OSIS, bertanggung
+                jawab merancang dan menjalankan program-program yang membangun
+                karakter dan jiwa kepemimpinan anggota. Saya belajar banyak
+                tentang komunikasi efektif, pengambilan keputusan, dan bekerja
+                lintas divisi dalam satu organisasi besar.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">OSIS</span>
+                <span class="tag">Program Kerja</span>
+                <span class="tag">Komunikasi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end timeline -->
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS SECTION ===================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// keahlian</span>
+        <h2 class="section-title">Skill & Teknologi</h2>
+        <p class="section-subtitle">Fondasi yang sedang saya bangun, batu demi batu.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Kartu Skill: Programming -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Pemrograman</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>C++</span>
+                <span class="skill-level">Dasar–Menengah</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Python</span>
+                <span class="skill-level">Dasar</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="50"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu Skill: CS Concepts -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon skill-icon-purple">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Konsep CS</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Logika Pemrograman</span>
+                <span class="skill-level">Menengah</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Struktur Data Dasar</span>
+                <span class="skill-level">Dasar–Menengah</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="60"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Analisis Algoritma</span>
+                <span class="skill-level">Dasar</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="45"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu Skill: System -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon skill-icon-green">
+              <i class="fab fa-linux"></i>
+            </div>
+            <h3>Sistem & OS</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Sistem Operasi</span>
+                <span class="skill-level">Dasar</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="55"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Linux CLI</span>
+                <span class="skill-level">Dasar</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="48"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu Skill: Soft Skills -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon skill-icon-orange">
+              <i class="fas fa-users-gear"></i>
+            </div>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Problem Solving</span>
+                <span class="skill-level">Baik</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Kepemimpinan</span>
+                <span class="skill-level">Baik</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Kolaborasi Tim</span>
+                <span class="skill-level">Baik</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="78"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end skills-grid -->
+
+      <!-- Tech badge row -->
+      <div class="tech-badges reveal">
+        <span class="tech-badge"><i class="fas fa-terminal"></i> C++</span>
+        <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+        <span class="tech-badge"><i class="fab fa-linux"></i> Linux</span>
+        <span class="tech-badge"><i class="fas fa-microchip"></i> OS Concepts</span>
+        <span class="tech-badge"><i class="fas fa-sitemap"></i> Data Structures</span>
+        <span class="tech-badge"><i class="fas fa-shield-halved"></i> Cyber Security *</span>
+        <span class="tech-badge"><i class="fas fa-puzzle-piece"></i> Problem Solving</span>
+      </div>
+      <p class="badge-note reveal">* sedang dipelajari & menjadi fokus ke depan</p>
+
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS SECTION ===================== -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// proyek</span>
+        <h2 class="section-title">Karya & Proyek</h2>
+        <p class="section-subtitle">Proyek-proyek yang sedang / akan dikerjakan.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project card 1 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-terminal"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="project-link" title="Live Demo">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Program Struktur Data</h3>
+          <p class="project-desc">
+            Implementasi berbagai struktur data (linked list, stack, queue, tree)
+            menggunakan C++ sebagai latihan pemahaman konsep dasar.
+          </p>
+          <div class="project-stack">
+            <span>C++</span>
+            <span>Data Structures</span>
+            <span>Algorithms</span>
+          </div>
+          <div class="project-status">
+            <span class="status-dot"></span> Dalam pengerjaan
+          </div>
+        </div>
+
+        <!-- Project card 2 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon project-icon-purple">
+              <i class="fab fa-python"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Eksplorasi Python</h3>
+          <p class="project-desc">
+            Kumpulan script Python untuk otomasi tugas-tugas kecil dan eksplorasi
+            logika pemrograman dalam sintaks yang lebih ringkas.
+          </p>
+          <div class="project-stack">
+            <span>Python</span>
+            <span>Scripting</span>
+            <span>Automation</span>
+          </div>
+          <div class="project-status">
+            <span class="status-dot"></span> Ongoing
+          </div>
+        </div>
+
+        <!-- Project card 3: placeholder -->
+        <div class="project-card project-card-dashed reveal">
+          <div class="project-placeholder">
+            <i class="fas fa-plus"></i>
+            <p>Proyek berikutnya sedang dalam perencanaan...</p>
+            <span>Stay tuned!</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// kontak</span>
+        <h2 class="section-title">Mari Terhubung</h2>
+        <p class="section-subtitle">
+          Punya pertanyaan, kolaborasi, atau sekadar ingin ngobrol? Jangan ragu!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info kontak -->
+        <div class="contact-info reveal">
+          <p class="contact-intro">
+            Saya selalu terbuka untuk diskusi seputar teknologi, CS, atau
+            hal-hal menarik lainnya. Feel free to reach out!
+          </p>
+
+          <div class="contact-items">
+            <a href="mailto:acena3701@gmail.com" class="contact-item">
+              <!-- GANTI EMAIL: ganti href dan teks di bawah -->
+              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-item-info">
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-value">avicena@email.com</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+
+            <a href="https://github.com/" target="_blank" class="contact-item">
+              <!-- GANTI LINK: ganti href GitHub kamu -->
+              <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+              <div class="contact-item-info">
+                <span class="contact-item-label">GitHub</span>
+                <span class="contact-item-value">github.com/avicena</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+
+            <a href="https://linkedin.com/" target="_blank" class="contact-item">
+              <!-- GANTI LINK: ganti href LinkedIn kamu -->
+              <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div class="contact-item-info">
+                <span class="contact-item-label">LinkedIn</span>
+                <span class="contact-item-value">Avicena Putra Pradana</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+
+            <a href="https://instagram.com/" target="_blank" class="contact-item">
+              <!-- GANTI LINK: ganti href Instagram kamu -->
+              <div class="contact-item-icon"><i class="fab fa-instagram"></i></div>
+              <div class="contact-item-info">
+                <span class="contact-item-label">Instagram</span>
+                <span class="contact-item-value">@avicena</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form kontak sederhana -->
+        <div class="contact-form-wrap reveal">
+          <div class="contact-form">
+            <h3>Kirim Pesan</h3>
+            <div class="form-group">
+              <label for="cName">Nama</label>
+              <input type="text" id="cName" placeholder="Nama kamu" />
+            </div>
+            <div class="form-group">
+              <label for="cEmail">Email</label>
+              <input type="email" id="cEmail" placeholder="email@contoh.com" />
+            </div>
+            <div class="form-group">
+              <label for="cMsg">Pesan</label>
+              <textarea id="cMsg" rows="4" placeholder="Tulis pesanmu di sini..."></textarea>
+            </div>
+            <button class="btn btn-primary btn-full" id="sendBtn" onclick="handleSend()">
+              <i class="fas fa-paper-plane"></i>
+              Kirim Pesan
+            </button>
+            <p class="form-note" id="formNote"></p>
+          </div>
+        </div>
+
+      </div><!-- end contact-grid -->
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">AVP<span class="logo-dot"></span></div>
+      <p class="footer-text">
+        Dibuat dengan <i class="fas fa-heart" style="color:#ef4444"></i> oleh
+        <strong>Avicena Putra Pradana</strong>
+      </p>
+      <p class="footer-sub">© 2024 · Masih belajar, terus berkembang.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== BACK TO TOP ===================== -->
+  <button class="back-to-top" id="backToTop" title="Kembali ke atas">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
